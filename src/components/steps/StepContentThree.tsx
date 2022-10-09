@@ -1,6 +1,6 @@
 import { ReactElement, useState } from "react";
-import UserIcon from "../assets/icons/User";
-import UserGroupIcon from "../assets/icons/UserGroup";
+import UserIcon from "../assets/UserIcon";
+import UserGroupIcon from "../assets/UserGroupIcon";
 import Card from "../Card";
 import Button from "../common/Button";
 
