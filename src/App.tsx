@@ -1,6 +1,6 @@
 import { Fragment, useState } from "react";
 import Container from "./components/common/Container";
-import StepperCircle from "./components/common/StepperCircle";
+import StepperCircle from "./components/StepperCircle";
 import StepContenFour from "./components/steps/StepContentFour";
 import StepContentOne from "./components/steps/StepContentOne";
 import StepContentThree from "./components/steps/StepContentThree";
