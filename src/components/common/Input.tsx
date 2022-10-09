@@ -7,11 +7,13 @@ type InputDefaultProps = React.DetailedHTMLProps<
 
 type InputProps = {
   label: string;
+  subLabel?: string;
   fullWidth?: boolean;
 } & InputDefaultProps;
 
 const Input: FC<InputProps> = ({
   label,
+  subLabel,
   fullWidth = false,
   className,
   ...inputProps
@@ -22,7 +24,10 @@ const Input: FC<InputProps> = ({
       <label
         htmlFor={inputProps.id ?? ""}
         className="font-medium text-gray-600 ">
-        {label}
+        {label}{" "}
+        {subLabel && (
+          <span className="text-sm text-gray-400">({subLabel})</span>
+        )}
       </label>
       <input
         {...inputProps}
