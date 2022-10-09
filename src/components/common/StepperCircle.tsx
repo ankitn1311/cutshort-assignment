@@ -25,7 +25,7 @@ const StepperCircle: FC<StepperCircleProps> = ({
     <>
       <div
         {...props}
-        className={`relative cursor-pointer flex items-center justify-center w-10 h-10  border rounded-full ${
+        className={`relative select-none cursor-pointer flex items-center justify-center w-10 h-10  border rounded-full ${
           completed || active
             ? "bg-indigo-600 text-gray-300"
             : "border-gray-300 text-gray-700"
@@ -35,12 +35,12 @@ const StepperCircle: FC<StepperCircleProps> = ({
       {!lastStep && (
         <>
           <div
-            className={`flex-1 border-t ${
-              completed ? "border-t-indigo-600" : ""
-            } ${active ? "border-t-indigo-600" : ""} `}></div>
+            className={`flex-1 border-t ${completed && "border-t-indigo-600"} ${
+              active && "border-t-indigo-600"
+            } `}></div>
           <div
             className={`flex-1 border-t ${
-              completed ? "border-t-indigo-600" : ""
+              completed && "border-t-indigo-600"
             }`}></div>
         </>
       )}

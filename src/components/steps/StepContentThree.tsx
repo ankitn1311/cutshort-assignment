@@ -1,4 +1,4 @@
-import { ReactElement, useState } from "react";
+import { FC, ReactElement, useState } from "react";
 import UserIcon from "../assets/UserIcon";
 import UserGroupIcon from "../assets/UserGroupIcon";
 import Card from "../Card";
@@ -10,7 +10,11 @@ export type CardType = {
   subHeading: string;
 };
 
-const StepContentThree = () => {
+type StepContentThreeProps = {
+  onNextPress: () => void;
+};
+
+const StepContentThree: FC<StepContentThreeProps> = ({ onNextPress }) => {
   const cards: CardType[] = [
     {
       icon: <UserIcon />,
@@ -28,7 +32,7 @@ const StepContentThree = () => {
   return (
     <>
       <div className="flex flex-col items-center w-full gap-2">
-        <h2 className="w-full text-2xl font-semibold text-left md:text-3xl md:text-center">
+        <h2 className="w-full text-2xl font-semibold text-left text-gray-800 md:text-3xl md:text-center">
           How are you planning to use Eden?
         </h2>
         <p className="w-full text-sm font-medium text-left text-gray-400 md:text-center">
@@ -36,10 +40,11 @@ const StepContentThree = () => {
         </p>
       </div>
       <div className="flex flex-col w-full gap-8 md:max-w-md">
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 gap-4 md:gap-8">
           {cards.map((card, index) => {
             return (
               <Card
+                index={index}
                 setActive={() => setSelectedCard(index)}
                 key={card.heading}
                 data={card}
@@ -48,7 +53,9 @@ const StepContentThree = () => {
             );
           })}
         </div>
-        <Button fullWidth={true}>Create Workspace</Button>
+        <Button fullWidth={true} onClick={onNextPress}>
+          Create Workspace
+        </Button>
       </div>
     </>
   );

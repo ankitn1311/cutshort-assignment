@@ -1,11 +1,16 @@
+import { FC } from "react";
 import Button from "../common/Button";
 import Input from "../common/Input";
 
-const StepContentTwo = () => {
+type StepContentTwoProps = {
+  onNextPress: () => void;
+};
+
+const StepContentTwo: FC<StepContentTwoProps> = ({ onNextPress }) => {
   return (
     <>
       <div className="flex flex-col items-center w-full gap-2">
-        <h2 className="w-full text-2xl font-semibold text-left md:text-3xl md:text-center">
+        <h2 className="w-full text-2xl font-semibold text-left text-gray-800 md:text-3xl md:text-center">
           Let's set up a home for all your work
         </h2>
         <p className="w-full text-sm font-medium text-left text-gray-400 md:text-center">
@@ -22,7 +27,9 @@ const StepContentTwo = () => {
             placeholder="Example"
           />
         </form>
-        <Button fullWidth={true}>Create Workspace</Button>
+        <Button fullWidth={true} onClick={onNextPress}>
+          Create Workspace
+        </Button>
       </div>
     </>
   );

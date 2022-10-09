@@ -51,7 +51,7 @@ const Button: FC<ButtonProps> = ({
   return (
     <button
       {...buttonProps}
-      className={`p-3 text-gray-200 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-600 focus:outline-none focus:ring-indigo-600 focus:ring-offset-1 focus:ring-2 text-sm font-medium rounded-lg ${fullWidthStyle} ${getSizeStyle()} ${className}`}>
+      className={`p-3 select-none text-gray-200 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-600 focus:outline-none focus:ring-indigo-600 focus:ring-offset-1 focus:ring-2 text-sm font-medium rounded-lg ${fullWidthStyle} ${getSizeStyle()} ${className}`}>
       {children}
     </button>
   );

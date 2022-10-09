@@ -1,6 +1,11 @@
+import { FC } from "react";
 import Button from "../common/Button";
 
-const StepContenFour = () => {
+type StepContentFourProps = {
+  onNextPress: () => void;
+};
+
+const StepContentFour: FC<StepContentFourProps> = ({ onNextPress }) => {
   return (
     <>
       <div>
@@ -21,7 +26,7 @@ const StepContenFour = () => {
         </div>
       </div>
       <div className="flex flex-col items-center gap-2">
-        <h2 className="text-2xl font-semibold md:text-3xl">
+        <h2 className="text-2xl font-semibold text-gray-800 md:text-3xl ">
           Congratulations, Eren!
         </h2>
         <p className="text-sm font-medium text-gray-400">
@@ -29,14 +34,12 @@ const StepContenFour = () => {
         </p>
       </div>
       <div className="flex flex-col w-full gap-8 md:max-w-md">
-        {/* <form className="flex flex-col w-full gap-4">
-          <Input label="Full Name" placeholder="Steve Jobs" />
-          <Input label="Display Name" placeholder="Steve" />
-        </form> */}
-        <Button fullWidth={true}>Launch Eden</Button>
+        <Button fullWidth={true} onClick={onNextPress}>
+          Launch Eden
+        </Button>
       </div>
     </>
   );
 };
 
-export default StepContenFour;
+export default StepContentFour;

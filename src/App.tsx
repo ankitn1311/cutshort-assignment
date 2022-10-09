@@ -14,16 +14,16 @@ function App() {
   const getContent = (currentStep: number) => {
     switch (currentStep) {
       case 1: {
-        return <StepContentOne />;
+        return <StepContentOne onNextPress={() => setActiveStep(2)} />;
       }
       case 2: {
-        return <StepContentTwo />;
+        return <StepContentTwo onNextPress={() => setActiveStep(3)} />;
       }
       case 3: {
-        return <StepContentThree />;
+        return <StepContentThree onNextPress={() => setActiveStep(4)} />;
       }
       case 4: {
-        return <StepContenFour />;
+        return <StepContenFour onNextPress={() => setActiveStep(1)} />;
       }
     }
   };
@@ -33,7 +33,11 @@ function App() {
       <div className="flex flex-col items-center w-full gap-10 px-6">
         <div className="flex flex-col items-center justify-center w-full gap-16">
           <div className="flex flex-row items-center gap-2">
-            <img src="/eden-logo.png" className="w-10 h-10" alt="eden logo" />
+            <img
+              src="/eden-logo.png"
+              className="w-10 h-10 select-none"
+              alt="eden logo"
+            />
             <p className="text-3xl font-bold">Eden</p>
           </div>
           <div className="flex items-center w-full px-6 md:max-w-md">
