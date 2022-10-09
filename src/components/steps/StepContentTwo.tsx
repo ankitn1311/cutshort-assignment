@@ -16,6 +16,7 @@ const StepContentTwo = () => {
         <form className="flex flex-col w-full gap-4">
           <Input label="Workspace Name" placeholder="Eden" />
           <Input
+            startText="www.eden.com/"
             label="Workspace URL"
             subLabel="optional"
             placeholder="Example"

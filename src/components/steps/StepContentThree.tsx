@@ -1,7 +1,30 @@
+import { ReactElement, useState } from "react";
+import UserIcon from "../assets/icons/User";
+import UserGroupIcon from "../assets/icons/UserGroup";
+import Card from "../Card";
 import Button from "../common/Button";
-import Input from "../common/Input";
+
+export type CardType = {
+  icon: ReactElement;
+  heading: string;
+  subHeading: string;
+};
 
 const StepContentThree = () => {
+  const cards: CardType[] = [
+    {
+      icon: <UserIcon />,
+      heading: "For myself",
+      subHeading: "Write better. Think more clearly. Stay organized.",
+    },
+    {
+      icon: <UserGroupIcon />,
+      heading: "With my team",
+      subHeading: "Wikis, docs, tasks & projects, all in one place.",
+    },
+  ];
+  const [selectedCard, setSelectedCard] = useState(0);
+
   return (
     <>
       <div className="flex flex-col items-center w-full gap-2">
@@ -13,10 +36,18 @@ const StepContentThree = () => {
         </p>
       </div>
       <div className="flex flex-col w-full gap-8 md:max-w-md">
-        <form className="flex flex-col w-full gap-4">
-          <Input label="Full Name" placeholder="Steve Jobs" />
-          <Input label="Display Name" placeholder="Steve" />
-        </form>
+        <div className="grid grid-cols-2 gap-8">
+          {cards.map((card, index) => {
+            return (
+              <Card
+                setActive={() => setSelectedCard(index)}
+                key={card.heading}
+                data={card}
+                active={selectedCard === index}
+              />
+            );
+          })}
+        </div>
         <Button fullWidth={true}>Create Workspace</Button>
       </div>
     </>
