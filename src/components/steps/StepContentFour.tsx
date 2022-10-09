@@ -1,5 +1,4 @@
 import Button from "../common/Button";
-import Input from "../common/Input";
 
 const StepContenFour = () => {
   return (
