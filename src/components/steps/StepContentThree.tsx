@@ -1,8 +1,10 @@
-import { FC, ReactElement, useState } from "react";
+import { FC, Fragment, ReactElement, useState } from "react";
 import UserIcon from "../assets/UserIcon";
 import UserGroupIcon from "../assets/UserGroupIcon";
 import Card from "../Card";
 import Button from "../common/Button";
+import Text from "../common/Text";
+import { RadioGroup } from "@headlessui/react";
 
 export type CardType = {
   icon: ReactElement;
@@ -29,35 +31,46 @@ const StepContentThree: FC<StepContentThreeProps> = ({ onNextPress }) => {
   ];
   const [selectedCard, setSelectedCard] = useState(0);
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    onNextPress();
+  };
+
   return (
-    <>
+    <div className="flex flex-col items-center justify-center w-full gap-16">
       <div className="flex flex-col items-center w-full gap-2">
-        <h2 className="w-full text-2xl font-semibold text-left text-gray-800 md:text-3xl md:text-center">
+        <Text type="primary" className="w-full text-left md:text-center">
           How are you planning to use Eden?
-        </h2>
-        <p className="w-full text-sm font-medium text-left text-gray-400 md:text-center">
+        </Text>
+        <Text type="secondary" className="w-full text-left md:text-center">
           We'll streamline your setup experience accordingly.
-        </p>
+        </Text>
       </div>
-      <div className="flex flex-col w-full gap-8 md:max-w-md">
-        <div className="grid grid-cols-2 gap-4 md:gap-8">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col w-full gap-8 md:max-w-md">
+        <RadioGroup
+          className="grid grid-cols-2 gap-4 md:gap-8"
+          value={selectedCard}
+          onChange={setSelectedCard}>
           {cards.map((card, index) => {
             return (
-              <Card
-                index={index}
-                setActive={() => setSelectedCard(index)}
-                key={card.heading}
-                data={card}
-                active={selectedCard === index}
-              />
+              <RadioGroup.Option
+                key={index}
+                value={index}
+                className="focus:outline-none">
+                {({ checked, active }) => (
+                  <Card data={card} checked={checked} active={active} />
+                )}
+              </RadioGroup.Option>
             );
           })}
-        </div>
-        <Button fullWidth={true} onClick={onNextPress}>
+        </RadioGroup>
+        <Button fullWidth={true} type="submit">
           Create Workspace
         </Button>
-      </div>
-    </>
+      </form>
+    </div>
   );
 };
 
