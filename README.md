@@ -1,7 +1,7 @@
 ## Tech used for the assignment:
 
 - React
-- Tailwind
+- Tailwind & HeadlessUI
 - Typescript
 
 
