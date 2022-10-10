@@ -1,6 +1,6 @@
 import Container from "./components/common/Container";
-import Header from "./components/Header";
-import Stepper from "./components/Stepper";
+import Header from "./components/common/Header";
+import Stepper from "./components/stepper/Stepper";
 
 function App() {
   return (

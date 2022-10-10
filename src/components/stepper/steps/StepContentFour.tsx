@@ -1,7 +1,7 @@
 import { FC } from "react";
-import CheckIcon from "../assets/CheckIcon";
-import Button from "../common/Button";
-import Text from "../common/Text";
+import CheckIcon from "../../assets/CheckIcon";
+import Button from "../../common/Button";
+import Text from "../../common/Text";
 
 type StepContentFourProps = {
   onNextPress: () => void;

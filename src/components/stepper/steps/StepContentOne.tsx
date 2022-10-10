@@ -1,7 +1,7 @@
 import { FC } from "react";
-import Button from "../common/Button";
-import Input from "../common/Input";
-import Text from "../common/Text";
+import Button from "../../common/Button";
+import Input from "../../common/Input";
+import Text from "../../common/Text";
 
 type StepContentOneProps = {
   onNextPress: () => void;

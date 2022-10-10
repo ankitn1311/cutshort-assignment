@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { CardType } from "./steps/StepContentThree";
+import { CardType } from "../stepper/steps/StepContentThree";
 
 type Props = {
   data: CardType;

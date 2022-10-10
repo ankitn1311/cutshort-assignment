@@ -1,9 +1,9 @@
 import { FC, ReactElement, useState } from "react";
-import UserIcon from "../assets/UserIcon";
-import UserGroupIcon from "../assets/UserGroupIcon";
-import Card from "../Card";
-import Button from "../common/Button";
-import Text from "../common/Text";
+import UserIcon from "../../assets/UserIcon";
+import UserGroupIcon from "../../assets/UserGroupIcon";
+import Card from "../../common/Card";
+import Button from "../../common/Button";
+import Text from "../../common/Text";
 import { RadioGroup } from "@headlessui/react";
 
 export type CardType = {
