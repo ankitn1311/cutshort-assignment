@@ -14,10 +14,10 @@ const Text: FC<TextProps> = ({ type, children, ...defaultProps }) => {
   const getTypeClasses = () => {
     switch (type) {
       case "primary": {
-        return "text-gray-800 font-semibold text-2xl md:text-3xl";
+        return "text-gray-800 font-semibold text-2xl md:text-3xl dark:text-gray-200";
       }
       case "secondary": {
-        return "text-sm font-medium text-gray-400";
+        return "text-sm font-medium text-gray-400 dark:text-gray-400";
       }
       default: {
         return "";
