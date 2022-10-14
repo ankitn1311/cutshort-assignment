@@ -7,7 +7,6 @@ import { GlobalContext } from "./state/contexts/GlobalContext";
 function App() {
   const {
     state: { darkMode },
-    dispatch,
   } = useContext(GlobalContext);
 
   useEffect(() => {
