@@ -9,7 +9,7 @@ type StepContentFourProps = {
 
 const StepContentFour: FC<StepContentFourProps> = ({ onNextPress }) => {
   return (
-    <div className="flex flex-col items-center justify-center w-full gap-16">
+    <div className="flex flex-col items-center justify-center w-full gap-8 md:gap-16">
       <div className="flex items-center justify-center text-gray-300 bg-indigo-600 rounded-full w-14 h-14">
         <CheckIcon />
       </div>
@@ -21,7 +21,7 @@ const StepContentFour: FC<StepContentFourProps> = ({ onNextPress }) => {
           You have completed onboarding, you can start using the Eden!
         </Text>
       </div>
-      <div className="flex flex-col w-full gap-8 md:max-w-md">
+      <div className="flex flex-col w-full max-w-md gap-8">
         <Button fullWidth={true} onClick={onNextPress}>
           Launch Eden
         </Button>

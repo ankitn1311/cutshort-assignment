@@ -37,20 +37,20 @@ const StepContentThree: FC<StepContentThreeProps> = ({ onNextPress }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full gap-16">
+    <div className="flex flex-col items-center justify-center w-full gap-8 md:gap-16">
       <div className="flex flex-col items-center w-full gap-2">
-        <Text type="primary" className="w-full text-left md:text-center">
+        <Text type="primary" className="w-full text-center">
           How are you planning to use Eden?
         </Text>
-        <Text type="secondary" className="w-full text-left md:text-center">
+        <Text type="secondary" className="w-full text-center">
           We'll streamline your setup experience accordingly.
         </Text>
       </div>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col w-full gap-8 md:max-w-md">
+        className="flex flex-col w-full gap-8 max-w-md">
         <RadioGroup
-          className="grid grid-cols-2 gap-4 md:gap-8"
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8"
           value={selectedCard}
           onChange={setSelectedCard}>
           {cards.map((card, index) => {

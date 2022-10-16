@@ -14,18 +14,18 @@ const StepContentTwo: FC<StepContentTwoProps> = ({ onNextPress }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full gap-16">
+    <div className="flex flex-col items-center justify-center w-full gap-8 md:gap-16">
       <div className="flex flex-col items-center w-full gap-2">
-        <Text type="primary" className="w-full text-left md:text-center">
+        <Text type="primary" className="w-full text-center">
           Let's set up a home for all your work
         </Text>
-        <Text type="secondary" className="w-full text-left md:text-center">
+        <Text type="secondary" className="w-full text-center">
           You can always create another workspace later.
         </Text>
       </div>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col w-full gap-8 md:max-w-md">
+        className="flex flex-col w-full max-w-md gap-8">
         <div className="flex flex-col w-full gap-4">
           <Input label="Workspace Name" placeholder="Eden" />
           <Input

@@ -19,8 +19,8 @@ function App() {
 
   return (
     <Container>
-      <div className="flex flex-col items-center w-full gap-10 px-6">
-        <div className="flex flex-col items-center justify-center w-full gap-16">
+      <div className="flex flex-col items-center w-full gap-10">
+        <div className="flex flex-col items-center justify-center w-full gap-10 md:gap-16">
           <Header />
           <Stepper />
         </div>

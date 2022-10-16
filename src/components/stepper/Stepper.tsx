@@ -35,8 +35,8 @@ const Stepper = () => {
   }, [activeStep]);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full gap-16">
-      <div className="flex items-center w-full px-6 md:max-w-md">
+    <div className="flex flex-col items-center justify-start w-full gap-10 md:justify-center md:gap-16">
+      <div className="flex items-center w-full max-w-md">
         {steps.map((step) => {
           return (
             <Fragment key={step}>

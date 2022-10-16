@@ -13,7 +13,7 @@ const Card: FC<Props> = ({ data, checked, active }) => {
 
   return (
     <div
-      className={`flex flex-col gap-6 p-4 md:p-6 border rounded-lg cursor-pointer ${
+      className={`flex flex-col justify-between h-full gap-6 p-4 md:p-6 border rounded-lg cursor-pointer ${
         checked ? "border-indigo-600" : "border-gray-300 dark:border-gray-500"
       } ${activeClasses}`}>
       <div
@@ -22,7 +22,7 @@ const Card: FC<Props> = ({ data, checked, active }) => {
         }`}>
         {data.icon}
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col justify-between gap-2">
         <p className="font-bold text-gray-700 dark:text-gray-200 md:text-lg">
           {data.heading}
         </p>

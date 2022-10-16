@@ -21,15 +21,16 @@ const Input: FC<InputProps> = ({
   ...inputProps
 }) => {
   const fullWidthStyle = fullWidth ? "w-full" : "";
+  // const fullWidthStyle = "";
 
   const renderCustomInput = () => (
     <div className="flex flex-row w-full">
-      <div className="flex items-center justify-center p-3 text-gray-400 bg-gray-100 border border-r-0 border-gray-200 rounded-l-lg dark:text-gray-400 dark:border-gray-800 dark:bg-gray-600">
+      <div className="flex items-center justify-center p-2 text-xs text-gray-400 bg-gray-100 border border-r-0 border-gray-200 rounded-l-lg md:text-md md:p-3 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-600">
         {startText}
       </div>
       <input
         {...inputProps}
-        className={`flex-1 p-3 text-sm border dark:bg-gray-500 border-gray-200 dark:border-gray-800 placeholder:text-gray-400 rounded-r-lg focus:ring-1 focus:ring-indigo-600 dark:focus:ring-indigo-400 focus:outline-none ${fullWidthStyle} ${className}`}
+        className={`flex grow p-2 min-w-[10px] md:p-3 text-sm border dark:text-white dark:bg-gray-500 border-gray-200 dark:border-gray-800 placeholder:text-gray-400 rounded-r-lg focus:ring-1 focus:ring-indigo-600 dark:focus:ring-indigo-400 focus:outline-none ${fullWidthStyle} ${className}`}
       />
     </div>
   );
@@ -55,7 +56,7 @@ const Input: FC<InputProps> = ({
       ) : (
         <input
           {...inputProps}
-          className={`p-3 text-sm border dark:text-white dark:bg-gray-500 dark:border-gray-800  border-gray-200 placeholder:text-gray-400 rounded-lg focus:ring-1 focus:ring-indigo-600 dark:focus:ring-indigo-400 focus:outline-none ${fullWidthStyle} ${className}`}
+          className={`p-2 md:p-3 text-sm border dark:text-white dark:bg-gray-500 dark:border-gray-800  border-gray-200 placeholder:text-gray-400 rounded-lg focus:ring-1 focus:ring-indigo-600 dark:focus:ring-indigo-400 focus:outline-none ${fullWidthStyle} ${className}`}
         />
       )}
     </div>

@@ -13,8 +13,7 @@ const Container: FC<ContainerProps> = ({ children }) => {
   } = useContext(GlobalContext);
 
   return (
-    <div
-      className={`flex flex-col items-center w-screen h-screen dark:bg-gray-700`}>
+    <div className="flex flex-col items-center w-screen min-h-screen dark:bg-gray-700">
       <nav
         className="flex flex-col justify-end w-full"
         onClick={() => dispatch(setTheme(!darkMode))}>
@@ -22,7 +21,7 @@ const Container: FC<ContainerProps> = ({ children }) => {
           {darkMode ? "light mode" : "dark mode"}
         </p>
       </nav>
-      <div className="flex items-center justify-center w-full h-full">
+      <div className="flex items-center justify-center w-full h-full p-4">
         {children}
       </div>
     </div>
