@@ -17,7 +17,7 @@ const StepperCircle: FC<StepperCircleProps> = ({
   children,
   ...props
 }) => {
-  const lastStep = currentStep === steps;
+  const lastStep = currentStep === steps - 1;
   const active = currentStep === activeStep;
   const completed = currentStep < activeStep;
 

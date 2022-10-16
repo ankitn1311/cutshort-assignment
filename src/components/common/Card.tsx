@@ -1,5 +1,10 @@
-import { FC } from "react";
-import { CardType } from "../stepper/steps/StepContentThree";
+import { FC, ReactElement } from "react";
+
+export type CardType = {
+  icon: ReactElement;
+  heading: string;
+  subHeading: string;
+};
 
 type Props = {
   data: CardType;

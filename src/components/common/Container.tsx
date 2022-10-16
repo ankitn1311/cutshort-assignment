@@ -21,7 +21,7 @@ const Container: FC<ContainerProps> = ({ children }) => {
           {darkMode ? "light mode" : "dark mode"}
         </p>
       </nav>
-      <div className="flex items-center justify-center w-full h-full p-4">
+      <div className="flex flex-col items-center self-stretch justify-center w-full p-4 md:mt-20">
         {children}
       </div>
     </div>
