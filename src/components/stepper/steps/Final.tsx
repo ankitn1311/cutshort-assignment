@@ -10,7 +10,7 @@ const Final = ({ next }: { next: any }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col w-full max-w-md gap-8">
+      className="flex flex-col w-full max-w-md gap-12">
       <Button fullWidth={true} type="submit">
         Launch Eden
       </Button>

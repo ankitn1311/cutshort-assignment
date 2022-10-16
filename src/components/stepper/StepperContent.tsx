@@ -23,7 +23,7 @@ const StepperContent: FC<StepContentOneProps> = ({
 
   return (
     <div
-      className={`flex flex-col items-center justify-center w-full gap-8 md:gap-16`}>
+      className={`flex flex-col items-center justify-center w-full gap-12 md:gap-16`}>
       {lastStep && (
         <div className="flex items-center justify-center text-gray-300 bg-indigo-600 rounded-full w-14 h-14">
           <CheckIcon />
